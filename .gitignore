@@ -1,0 +1,10 @@
+# Entorno virtual
+.venv/
+__pycache__/
+*.pyc
+
+# Debug
+debug_*.png
+
+# Archivos de salida opcionales (resultados.json se puede versionar si quieres)
+# resultados.json

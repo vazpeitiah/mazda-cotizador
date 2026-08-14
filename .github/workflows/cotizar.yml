@@ -1,0 +1,45 @@
+name: Cotizar Mazda
+
+on:
+  schedule:
+    # Todos los lunes a las 14:00 UTC (08:00 CDMX)
+    - cron: "0 14 * * 1"
+  workflow_dispatch: # permite ejecutarlo manualmente desde la pestaña Actions
+
+permissions:
+  contents: write
+
+jobs:
+  cotizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Instalar dependencias
+        run: |
+          pip install playwright==1.62.0
+          playwright install --with-deps chromium
+
+      - name: Ejecutar cotización
+        run: |
+          python cotizar.py \
+            --modelo "MAZDA CX-5" \
+            --version "MAZDA CX-5 I GRAND TOURING 2WD" \
+            --anio 2026 \
+            --enganche 200000 \
+            --plazo 36 \
+            --json resultados.json
+
+      - name: Publicar resultados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add resultados.json
+          git diff --cached --quiet || git commit -m "Actualizar cotización Mazda ($(date -u +%Y-%m-%d))"
+          git push
