@@ -1,46 +1,46 @@
 {
   "fuente": "mazdafinancialservices.mx/TekFinauto (cotizador oficial)",
-  "fecha": "2026-08-14 02:49:09 UTC",
+  "fecha": "2026-08-14 02:54:34 UTC",
   "consulta": {
     "estado": "HIDALGO",
     "distribuidor": "MAZDA PACHUCA",
-    "modelo": "MAZDA CX-30",
-    "version": "MAZDA CX-30 I GRAND TOURING 2WD",
+    "modelo": "MAZDA CX-5",
+    "version": "MAZDA CX-5 I GRAND TOURING 2WD",
     "anio": 2026,
     "plan": "MAZDA FLEX SUV TASA 13.49 %",
-    "valor_vehiculo": 525900.0,
-    "enganche": 149986.68,
-    "enganche_porcentaje": "28.52%"
+    "valor_vehiculo": 659900.0,
+    "enganche": 200015.69,
+    "enganche_porcentaje": "30.31%"
   },
   "cuotas": [
     {
       "plazo_meses": 12,
-      "cuota_mensual": 33662.03
+      "cuota_mensual": 41181.41
     },
     {
       "plazo_meses": 24,
-      "cuota_mensual": 17958.25
+      "cuota_mensual": 21969.73
     },
     {
       "plazo_meses": 36,
-      "cuota_mensual": 12754.91
+      "cuota_mensual": 15604.08
     },
     {
       "plazo_meses": 48,
-      "cuota_mensual": 10176.47
+      "cuota_mensual": 12449.68
     },
     {
       "plazo_meses": 60,
-      "cuota_mensual": 8647.77
+      "cuota_mensual": 10579.5
     },
     {
       "plazo_meses": 72,
-      "cuota_mensual": 7643.69
+      "cuota_mensual": 9351.12
     }
   ],
   "nota": "Cuotas aproximadas; no incluyen seguro de daños ni coberturas adicionales. Datos personales ficticios; el cálculo se muestra antes del código de verificación.",
   "plazo_seleccionado": {
-    "plazo_meses": 48,
-    "cuota_mensual": 10176.47
+    "plazo_meses": 36,
+    "cuota_mensual": 15604.08
   }
 }
